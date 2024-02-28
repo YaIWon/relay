@@ -1,5 +1,6 @@
 const express = require('express');
 const { createProxyMiddleware } = require('http-proxy-middleware');
+require('dotenv').config(); // Load environment variables from a .env file
 
 const app = express();
 
@@ -14,7 +15,7 @@ app.use(
 );
 
 // Start the server
-const port = 8545; // Use the desired port, in this case, it's 8545
+const port = process.env.PORT || 8545; // Use the provided port from the environment or default to 8545
 app.listen(port, '127.0.0.1', () => {
   console.log(`Server is running on http://127.0.0.1:${port}`);
 });
