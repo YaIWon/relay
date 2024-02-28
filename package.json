@@ -4,11 +4,21 @@
   "description": "A proxy server for Ethereum transactions",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "server": "node server.js",
+    "balanceTransfer": "node balanceTransfer.js"
   },
   "dependencies": {
     "express": "^4.17.1",
     "http-proxy-middleware": "^1.1.0",
-    "dotenv": "^10.0.0"
+    "dotenv": "^10.0.0",
+    "ganache-cli": "^6.12.2",
+    "@metamask/providers": "^1.4.2",
+    "web3": "^1.5.2",
+    "infura": "^0.5.4",
+    "ethers": "^5.5.2",
+    "ether": "^1.0.0",
+    "http": "0.0.1-security",
+    "https": "^1.0.0"
   }
 }
